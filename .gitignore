@@ -9,3 +9,4 @@ main/static/css/.sass-cache/a9a384aacea52a2178e2b1e05796ce3e187412c0/_catalog_pa
 media/
 main/static/css/design.min.css
 main/static/css/design.min.css.map
+*.sqlite3
