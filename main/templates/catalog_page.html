@@ -1,0 +1,221 @@
+{% extends "main_template.html" %}
+{% block content %}
+{% load staticfiles %}
+<main>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a class="breadcrumb-item" href="#">Главная</a>
+            <a class="breadcrumb-item active" href="#">Каталог</a>
+            <!--<span class="breadcrumb-item active">Гостинная</span>-->
+        </nav>
+        <!--<h1 class="pagetitle">{{ pagetitle }}</h1>-->
+        <div class="left_block catalog vertical">
+            <div class="bx_filter bx_filter_vertical">
+                <div class="bx_filter_section">
+                    <form name="_form" action="/catalog/avtoelektronika/radary_detektory/" method="get" class="smartfilter" id="smartfilter">
+                        <div class="bx_filter_parameters_box active">
+                            <span class="bx_filter_container_modef"></span>
+                            <div class="bx_filter_parameters_box_title">Цена</div>
+                            <div class="bx_filter_block">
+                                <div class="bx_filter_parameters_box_container">
+                                    <div class="wrapp_all_inputs wrap_md box-price">
+                                            <label for="price">
+                                                <input type="text" name="price" id="price">
+                                            </label>
+                                            <label for="price2">
+                                                <input type="text" name="price2" id="price2">
+                                            </label>
+                                        <div id="slider_price"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                //ползунок
+
+                                $('#price').change(function () {
+                                    var val = $(this).val();
+                                    $('#slider_price').slider("values",0,val);
+                                });
+
+                                $('#price2').change( function() {
+                                    var val2 = $(this).val();
+                                    $('#slider_price').slider("values",1,val2);
+                                });
+
+                                $( "#slider_price" ).slider({
+                                    range: true,
+                                    //orientation: "vertical",
+                                    min: {{ cost_data.cost_of__min }},
+                                    step: 500,
+                                    max: {{ cost_data.cost_of__max }},
+                                    values: [ {{ cost_data.cost_of__min }}, {{ cost_data.cost_of__max }} ],
+                                    slide: function( event, ui ) {
+                                        //$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                                        $('#price').val(ui.values[0]);
+                                        $('#price2').val(ui.values[1]);
+                                    }
+                                });
+                                //$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+                                //" - $" + $( "#slider-range" ).slider( "values", 1 ) );
+                                $('#price').val($('#slider_price').slider("values",0));
+                                $('#price2').val($('#slider_price').slider("values",1));
+                            </script>
+                        </div>
+                        <div class="bx_filter_parameters_box active" data-expanded="Y" data-prop_code="hit" data-property_id="41">
+                            <span class="bx_filter_container_modef"></span>
+                            <div class="bx_filter_parameters_box_title">
+                                <div>
+                                    Наши предложения
+                                </div>
+                            </div>
+                            <div class="bx_filter_block">
+                                <div class="bx_filter_parameters_box_container">
+                                    <label>
+                                        <input type="checkbox" value="" name="">
+                                        <span>Скидки</span>
+                                    </label>
+                                </div>
+                                <div class="bx_filter_parameters_box_container">
+                                    <label>
+                                        <input type="checkbox" value="" name="">
+                                        <span>Акции</span>
+                                    </label>
+                                </div>
+                                <div class="bx_filter_parameters_box_container">
+                                    <label>
+                                        <input type="checkbox" value="" name="">
+                                        <span>Распродажа</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clb"></div>
+                        <div class="bx_filter_button_box active">
+                            <div class="bx_filter_block">
+                                <div class="bx_filter_parameters_box_container">
+                                    <div class="bx_filter_popup_result right" id="modef_mobile" style="display:none">
+                                        Выбрано <span id="modef_num_mobile">0</span>
+                                        <a href="#" class="button white_bg">Показать</a>
+                                    </div>
+                                    <div class="bx_filter_popup_result right" id="modef" style="display:none">
+                                        Выбрано <span id="modef_num">0</span>
+                                        <a href="#" class="button white_bg">Показать</a>
+                                    </div>
+                                    <input class="bx_filter_search_button button small" type="button" id="set_filter" name="set_filter" data-href="" value="Показать">
+                                    <input class="bx_filter_search_reset button small transparent" type="reset" id="del_filter" name="del_filter" data-href="" value="Сбросить">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="internal_sections_list">
+                <div class="title opened">
+                    <div class="inner_block">Каталог
+                        <span class="hider opened"></span>
+                    </div>
+                </div>
+                <ul class="sections_list_wrapp">
+                    {% for nom in nomenclature %}
+<<<<<<< HEAD
+                    <li class="item" id="bx_4145281613_{{ nom.data_id }}" data-id="{{ nom.data_id }}">
+                        <a href="#" class="parent cur"><span>{{ nom.name }}</span></a>
+=======
+                    <li class="item {% if room_name_url %}{% if nom.name_url == room_name_url %}cur{% endif %}{% endif %}" id="bx_4145281613_{{ nom.data_id }}" data-id="{{ nom.data_id }}">
+                        <a href="/catalog/{{ nom.name_url }}/" class="parent "><span>{{ nom.name }}</span></a>
+>>>>>>> a8e5c05 (Сделал нормальные указатели в категориях)
+                        {% if nom.get_categories %}
+                        <div class="child_container">
+                            <div class="child_wrapp ">
+                                <ul class="child ">
+                                    {% for cat in nom.get_categories %}
+<<<<<<< HEAD
+                                    <li class="menu_item" data-id="{{ cat.data_id }}"><a href="#">{{ cat.name }}</a></li>
+=======
+                                    <li class="menu_item {% if category_name_url %}{% if cat.name_url == category_name_url %}cur{% endif %}{% endif %}" data-id="{{ cat.data_id }}"><a href="/catalog/{{ nom.name_url }}/{{ cat.name_url }}/">{{ cat.name }}</a></li>
+>>>>>>> a8e5c05 (Сделал нормальные указатели в категориях)
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+        <div class="right_block clearfix catalog" id="right_block_ajax">
+            <div class="inner_wrapper">
+                <div class="sort_header view_block">
+                    <!--noindex-->
+                    <div class="sort_filter">
+                        <a rel="nofollow" href="#" class="sort_btn current asc SHOWS">
+                            <span>По популярности</span>
+                            <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                            <!--<i class="fa fa-sort-desc" aria-hidden="true"></i>-->
+                        </a>
+                        <a rel="nofollow" href="#" class="sort_btn  asc NAME">
+                            <span>По алфавиту</span>
+                            <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                            <!--<i class="fa fa-sort-desc" aria-hidden="true"></i>-->
+                        </a>
+                        <a rel="nofollow" href="#" class="sort_btn  asc PRICE">
+                            <span>По цене</span>
+                            <!--<i class="fa fa-sort-asc" aria-hidden="true"></i>-->
+                            <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <!--/noindex-->
+                </div>
+                <div class="catalog clearfix">
+                    {% for item in items %}
+                    <div class="item-card">
+                        <div class="item_wrap">
+                            <img src="{{ item.main_photo.url }}" alt="">
+                            {% if item.discount > 0 %}
+                            <h5 class="name">{{ item.name }} <span class="discount">{{ item.discount }}%</span></h5>
+                            <p class="price old">{{ item.cost_of }} <i class="fa fa-rub" aria-hidden="true"></i></p>
+                            <p class="price">{{ item.get_discount }} <i class="fa fa-rub" aria-hidden="true"></i></p>
+                            {% else %}
+                            <h5 class="name">{{ item.name }}</h5>
+                            <p class="price">{{ item.cost_of }} <i class="fa fa-rub" aria-hidden="true"></i></p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% empty %}
+                    <h1>empty</h1>
+                    {% endfor %}
+                </div>
+
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center custom-pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">50</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+    </div>
+</main>
+{% endblock %}

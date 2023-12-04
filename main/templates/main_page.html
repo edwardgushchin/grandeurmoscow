@@ -1,0 +1,156 @@
+{% extends "main_template.html" %}
+{% block content %}
+{% load staticfiles %}
+<main>
+    <div class="container main-page">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 main-block">
+                <a href="/catalog/type/livingrooms/">
+                    <div class="shadow">
+                        <h1 class="title">Гостинные</h1>
+                    </div>
+                    <div class="image">
+                        <img src="{% static '/img/main/1.jfif' %}" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 main-block">
+                <a href="/catalog/type/bedroom/">
+                    <div class="shadow">
+                        <h1 class="title">Спальни</h1>
+                    </div>
+                    <div class="image">
+                        <img src="{% static '/img/main/2.jfif' %}" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 main-block">
+                <a href="/catalog/type/kitchen/">
+                    <div class="shadow">
+                        <h1 class="title">Кухни</h1>
+                    </div>
+                    <div class="image">
+                        <img src="{% static '/img/main/3.jfif' %}" alt="">
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 main-block">
+                <a href="/catalog/type/childrens/">
+                    <div class="shadow">
+                        <h1 class="title">Детские</h1>
+                    </div>
+                    <div class="image">
+                        <img src="{% static '/img/main/4.jfif' %}" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 main-block">
+                <a href="/catalog/type/cabinet/">
+                    <div class="shadow">
+                        <h1 class="title">Кабинеты</h1>
+                    </div>
+                    <div class="image">
+                        <img src="{% static '/img/main/5.jfif' %}" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 main-block">
+                <a href="/catalog/type/hallway/">
+                    <div class="shadow">
+                        <h1 class="title">Прихожие</h1>
+                    </div>
+                    <div class="image">
+                        <img src="{% static '/img/main/6.jfif' %}" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row carousel hidden-xs-down">
+            <h1 class="carousel-title">Хиты продаж</h1>
+<<<<<<< HEAD
+            <div class="owl-carousel">
+                <a class="carousel-link" href="/catalog/product/1/">
+=======
+            <div class="owl-carousel slider-carousel">
+                {% for item in hit_items %}
+                <a class="carousel-link" href="/catalog/item/{{ item.id }}/">
+>>>>>>> ba49513 (Добавил отображение хитов продаж на главной странице)
+                    <div class="carousel-block">
+                        <img src="{{ item.main_photo.url }}" alt="">
+                        {% if item.discount > 0 %}
+                        <h5 class="name">{{ item.name }} <span class="discount">{{ item.discount }}%</span></h5>
+                        <p class="price old">{{ item.cost_of }} <i class="fa fa-rub" aria-hidden="true"></i></p>
+                        <p class="price">{{ item.get_discount }} <i class="fa fa-rub" aria-hidden="true"></i></p>
+                        {% else %}
+                        <h5 class="name">{{ item.name }}</h5>
+                        <p class="price">{{ item.cost_of }} <i class="fa fa-rub" aria-hidden="true"></i></p>
+                        {% endif %}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 main-block">
+                <a href="/catalog/type/softfurniture/">
+                    <div class="shadow">
+                        <h1 class="title">Мягкая мебель</h1>
+                    </div>
+                    <div class="image">
+                        <img src="{% static '/img/main/12.png' %}" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 main-block">
+                <a href="/catalog/type/light/">
+                    <div class="shadow">
+                        <h1 class="title">Свет</h1>
+                    </div>
+                    <div class="image">
+                        <img src="{% static '/img/main/13.png' %}" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 main-block">
+                <a href="/catalog/type/accessories/">
+                    <div class="shadow">
+                        <h1 class="title">Аксессуары</h1>
+                    </div>
+                    <div class="image">
+                        <img src="{% static '/img/main/14.png' %}" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row carousel hidden-xs-down">
+            <h1 class="carousel-title">Скидки</h1>
+<<<<<<< HEAD
+            <div class="owl-carousel">
+                <a class="carousel-link" href="/catalog/product/6/">
+=======
+            <div class="owl-carousel slider-carousel">
+                {% for item in discount_items %}
+                <a class="carousel-link" href="/catalog/item/{{ item.id }}/">
+>>>>>>> 721d771 (Добавил вывод рандомных товаров со скидкой)
+                    <div class="carousel-block">
+                        <img src="{{ item.main_photo.url }}" alt="">
+                        {% if item.discount > 0 %}
+                        <h5 class="name">{{ item.name }} <span class="discount">{{ item.discount }}%</span></h5>
+                        <p class="price old">{{ item.cost_of }} <i class="fa fa-rub" aria-hidden="true"></i></p>
+                        <p class="price">{{ item.get_discount }} <i class="fa fa-rub" aria-hidden="true"></i></p>
+                        {% else %}
+                        <h5 class="name">{{ item.name }}</h5>
+                        <p class="price">{{ item.cost_of }} <i class="fa fa-rub" aria-hidden="true"></i></p>
+                        {% endif %}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

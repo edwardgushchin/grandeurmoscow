@@ -1,0 +1,22 @@
+//global varibles
+$grid-space: 20px           //Размер сетки между блоками
+$container-width: 1140      //Ширина контейнера
+//mixins
+
+@mixin transition($ms) 
+    -webkit-transition: all $ms ease-in
+    -moz-transition: all $ms ease-in
+    -ms-transition: all $ms ease-in
+    -o-transition: all $ms ease-in
+    transition: all $ms ease-in
+
+//styles
+
+@import '_main'
+@import '_main_page'
+@import '_news_page'
+@import '_sales_page'
+@import '_catalog_page'
+@import '_factories_page'
+@import '_designers_page'
+@import '_contacts_page'

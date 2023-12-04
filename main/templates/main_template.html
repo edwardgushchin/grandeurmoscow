@@ -1,0 +1,250 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+        <meta name="author" content="Edward Design"/>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Condensed|Roboto" rel="stylesheet">
+        <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'css/owlcarousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owlcarousel/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/jquery-ui-1.8.19.custom.css' %}">
+<<<<<<< HEAD
+=======
+        <link rel="stylesheet" href="{% static 'css/jqModal.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/tooltipster.main.min.css' %}">
+>>>>>>> 88bd55b (Исправил все)
+        <link rel="stylesheet" href="{% static 'css/design.min.css' %}">
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+        
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <header>
+            <h1>{{ settings.name }}</h1>
+            <p>{{ settings.about_descript }}</p>
+        </header>
+        <nav class="navbar navbar-inverse bg-inverse sticky-top navbar-toggleable-md navbar-light d-flex">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container">
+                <a class="navbar-brand" href="#">Главное меню</a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link {% if current == 1 %} active {% endif %}" href="/">Главная</a>
+                        <a class="nav-item nav-link {% if current == 2 %} active {% endif %}" href="/news/">Новинки</a>
+                        <a class="nav-item nav-link {% if current == 3 %} active {% endif %}" href="/sales/">Распродажи</a>
+                        <a class="nav-item nav-link {% if current == 4 %} active {% endif %}" href="/catalog/">Каталог</a>
+                        <a class="nav-item nav-link {% if current == 5 %} active {% endif %}" href="/factories/">Фабрики</a>
+                        <a class="nav-item nav-link {% if current == 6 %} active {% endif %}" href="/designers/">Дизайнерам и архитекторам</a>
+                        <a class="nav-item nav-link {% if current == 7 %} active {% endif %}" href="/contacts/">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        {% block content %}<p>Контент</p>{% endblock %}
+        <footer>
+            <p class="footer-hr-title">Покупателям</p>
+            <hr>
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 footer-col">
+                        <a href="">Контакты</a>
+                        <a href="">Доставка</a>
+                        <a href="">Оплата</a>
+                        <a href="">Возврат</a>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 footer-col">
+                        <a href="">Скидки и акции</a>
+                        <a href="">Клубная карта</a>
+                        <a href="">Сертификаты</a>
+                        <a href="">Вопросы</a>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 footer-col">
+                        <a href="">Оферта</a>
+                        <a href="">Отзывы</a>
+                        <a href="">Города доставки</a>
+                        <a href="">Полезная информация</a>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 footer-col">
+                        <p class="color-gray"><i class="fa fa-clock-o" aria-hidden="true"></i> 24/7</p>
+                        <a href="/contacts/" class="color-gray">Связь с Универмагом</a>
+                        <p>{{ settings.primary_number }}</p>
+                        <p>{{ settings.additional_number }}</p>
+                    </div>
+                    
+                </div>
+            
+            </div>
+        </footer>
+        <div class="end">
+            <p>Design by <a href="https://www.edwardesign.ru/">Edward Design <i class="fa fa-copyright" aria-hidden="true"> 2017</i></a></p>
+        </div>
+        <!--Basket fly-->
+        <!--<div class="basket_fly">
+            <input type="hidden" name="total_price" value="6 599.85 руб.">
+            <input type="hidden" name="total_discount_price" value="6 599.85 руб.">
+            <input type="hidden" name="total_count" value="1">
+            <input type="hidden" name="delay_count" value="0">
+
+            <div class="opener" title="6 599.85 руб.">
+                <div class="basket_count small" data-type="AnDelCanBuy">
+                    <a href="/basket/"></a>
+                    <div class="wraps_icon_block basket">
+                        <div class="count">
+					<span>
+						<div class="items">
+							<div>1</div>
+						</div>
+					</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="basket_sort">
+                <span class="basket_title">Корзина заказа</span>
+                <span class="wrap_remove_button">
+                    <span class="button grey_br transparent remove_all_basket AnDelCanBuy cur" data-type="1">Очистить</span>
+
+                </span>
+            </div>
+
+            <form method="post" action="/ajax/basket_fly.php" name="basket_form" id="basket_form" class="basket_wrapp">
+                <ul class="tabs_content basket">
+                    <li item-section="AnDelCanBuy" class="cur">
+                        <div class="module-cart">
+                            <div class="goods" style="overflow-x: hidden !important;">
+                                <table class="colored" height="100%" width="100%">
+                                    <thead>
+                                    <tr>
+                                        <td class="thumb-cell"></td><td class="name-th">
+                                        Наименование</td>
+                                        <td class="price-th">Цена</td>
+                                        <td class="quantity-th">Количество</td>
+                                        <td class="summ-th">Сумма</td>
+                                        <td class="remove-cell"></td>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr data-id="26123" product-id="233" data-iblockid="">
+                                        <td class="thumb-cell">
+                                            <a href="#" class="thumb">
+                                                <img src="/static/img/main/16.png" alt="Кушетка Silver ED" title="Кушетка Silver ED">
+                                            </a>
+                                        </td>
+                                        <td class="name-cell" style="padding-left:0; padding-right:0;">
+                                            <a href="#">Кушетка Silver ED </a><br>
+
+                                            <div class="item_props">
+                                            </div>
+                                        </td>
+                                        <td class="cost-cell notes">
+                                            <div class="cost prices clearfix">
+                                                <div class="price_name">Розничная цена</div>
+                                                <div class="price">10 200 <i class="fa fa-rub" aria-hidden="true"></i></div>
+                                                <input type="hidden" name="item_price_26123" value="10200">
+                                                <input type="hidden" name="item_summ_26123" value="10200">
+                                            </div>
+                                        </td>
+                                        <td class="count-cell" style="vertical-align: top !important; padding-left: 2px; padding-right: 2px;">
+                                            <div class="counter_block basket">
+                                                <span class="minus">-</span>
+                                                <input type="text" class="text popup-count" id="QUANTITY_INPUT_1" name="QUANTITY_INPUT_1" size="2" data-id="26123" maxlength="18" min="0" max="2" step="1" value="1">
+                                                <span class="plus">+</span>									</div>
+                                            <input type="hidden" id="QUANTITY_1" name="QUANTITY_1" value="1">
+                                        </td>
+                                        <td class="summ-cell"><div class="cost prices"><div class="price">10 200 <i class="fa fa-rub" aria-hidden="true"></i></div></div></td>
+
+                                        <td class="remove-cell"><a class="remove" href="#" title="Удалить"><i></i></a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="itog">
+                                <table class="colored fixed" height="100%" width="100%">
+                                    <tfoot>
+                                    <tr data-id="total_row">
+                                        <td colspan="2" class="row_titles">
+                                            <div class="item_title">Итого</div>
+                                        </td>
+                                        <td class="row_values">
+                                            <div class="wrap_prices">
+                                                <div data-type="price_normal"><span class="price">10 200 <i class="fa fa-rub" aria-hidden="true"></i></span></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="total_buttons" class="bottom_btn">
+                                        <td>
+                                            <div class="basket_close">
+                                                <span class="button transparent grey_br sbold close"><span>Продолжить покупки</span></span>
+                                                <div class="description">Вернуться к выбору товаров</div>
+                                            </div>
+                                        </td>
+                                        <td class="back_btn">
+                                        </td>
+                                        <td width="19%">
+                                            <div class="basket_back">
+                                                <div class="wrap_button">
+                                                    <a href="№" class="button transparent sbold"><span>Перейти в корзину</span></a>
+                                                </div>
+                                                <div class="description">Полноценное оформление<br> заказа</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="one_click_buy_basket_frame"></div>
+                    </li>
+                </ul>
+            </form>
+        </div>-->
+        <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+        <script src="https://use.fontawesome.com/22f5b9d95d.js"></script>
+        <script src="{% static 'js/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                $(".owl-carousel").owlCarousel({
+                    loop:true,
+                    dots:true,
+                    dotData:true,
+                    autoplay:true,
+                    stagePadding: 100,
+                    smartSpeed: 550,
+                    responsiveClass:true,
+                    responsive:{
+                        0:{
+                            items:1,
+                        },
+                        576:{
+                            items:2,
+                        },
+                        992:{
+                            items:3,
+                        }
+                    }
+                });
+            });
+        </script>
+        <script src="{% static 'js/jquery.cookie.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

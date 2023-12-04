@@ -1,0 +1,904 @@
+.pagetitle
+  font-size: 36px
+  font-weight: 600
+  line-height: 30px
+  margin: 0 0 39px
+
+.breadcrumb
+  margin-bottom: 2rem !important
+
+.left_block.catalog
+  margin-top: 29px
+  width: 210px
+
+.left_block
+  width: 200px
+  float: left
+  position: relative
+  zoom: 1
+  z-index: 10
+
+.bx_filter
+  .bx_filter_section
+    border: 1px solid #e5e5e5
+    margin: 0 0 20px
+    background: #fff
+
+  .bx_filter_parameters_box
+    padding: 13px 19px 14px
+    border-bottom: 1px solid #e5e5e5
+
+  .bx_filter_button_box
+    display: block
+
+  .bx_filter_block
+    padding: 0
+    font-size: 0
+    position: relative
+    zoom: 1
+  a
+    font-size: 13px
+  span
+    font-size: 13px
+    margin-left: 10px
+    display: inline-block
+    vertical-align: middle
+  input
+    display: inline-block
+    vertical-align: middle
+
+  label
+    margin-bottom: 0
+
+  .bx_filter_param_label
+    &:last-child
+      margin-bottom: -1px
+
+  input[type=checkbox]+label
+    padding-left: 5px
+    position: relative
+    z-index: 100
+    cursor: pointer
+    outline: 0
+
+  .bx_filter_input_checkbox
+    .bx_filter_param_text
+      display: block
+      line-height: 14px
+      margin-left: 2px
+      text-align: left
+      overflow: hidden
+      font-size: 12px
+
+  .bx_filter_parameters_box_title
+    font-size: 13px
+    display: block
+    font-weight: 500
+    cursor: pointer
+    position: relative
+    padding: 0 15px 0 0
+    &:hover
+      &:before
+        display: block
+    &>div
+      position: relative
+      display: inline-block
+    &>span
+      position: relative
+      display: inline-block
+
+    &:after
+      position: absolute
+      content: ''
+      top: 50%
+      width: 8px
+      height: 5px
+      right: 0
+      margin-top: -2px
+      background: url(../img/main/arrows.png) -1px -162px no-repeat
+
+  .active.bx_filter_parameters_box_title:after
+    margin-top: -3px
+    background-position: -35px -162px
+
+  .bx_filter_parameters_box_container .bx_filter_input_container input
+    padding: 5px 8px 4px
+
+  input:not(.button)
+    line-height: 20px
+
+  input[type=text], select, textarea
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    -o-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    background: #f7f7f7
+    border: 1px solid #E5E5E5
+    border-radius: 2px
+    box-shadow: none
+    color: #383838
+    height: auto
+    font-size: 12px
+    padding: 8px 13px 7px
+    width: 100%
+  .bx_filter_block
+    padding: 0
+    font-size: 0
+    position: relative
+    zoom: 1
+    cursor: pointer
+
+  .bx_filter_parameters_box_container
+    margin-top: 15px
+  .wrap_md
+    display: inline-block
+    vertical-align: top
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    -o-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    font-size: 13px
+
+  .wrapp_all_inputs.wrap_md .iblock
+    width: 100%
+
+  .bx_filter_button_box
+    clear: both
+    text-align: center
+    background: #f7f7f7
+    padding: 19px
+
+  .button#set_filter
+    margin: 0 8px 0 0
+
+  .button
+    padding-left: 11px
+    padding-right: 12px
+
+.button
+  -webkit-appearance: none
+  color: #FFF
+  background: #faaa00
+  text-transform: uppercase
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -o-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  outline: 0
+  font-size: 10px
+  background: #ddd
+  color: #000
+  -webkit-border-radius: 2px
+  -moz-border-radius: 2px
+  border-radius: 2px
+  text-align: center
+  padding: 9px 13px 8px
+  border: none
+  outline: 0
+  position: relative
+  font-family: inherit
+  cursor: pointer
+  &:hover
+    background: #424242
+    color: #fff
+  &.sbold
+    font-weight: 500
+  &.transparent
+    color: #ddd
+    border: 1px solid #ddd
+    background: 0 0
+    padding-top: 8px
+    padding-bottom: 7px
+
+.left_block
+  a
+    color: #1d1a1a
+  .internal_sections_list
+    ul
+      &.sections_list_wrapp
+        margin: 1px 0 0
+        padding: 0
+        &>li
+          &.item
+            border-top: 1px solid #fff
+            &:first-child
+              border-top: 0
+            &.cur
+              .child_container
+                display: block
+    .title
+      padding: 14px 19px 13px
+      position: relative
+      white-space: nowrap
+      font-size: 13px
+      line-height: 18px
+      font-weight: 500
+      border: 1px solid #e5e5e5
+      .inner_block
+        position: relative
+        cursor: pointer
+      .hider
+        display: inline-block
+        height: 5px
+        width: 8px
+        background: url(../img/main/arrows.png) -35px -162px no-repeat
+        cursor: pointer
+        top: 7px
+        right: 0
+        position: absolute
+        .opened
+          background-position: -1px -162px
+    li
+      position: relative
+      zoom: 1
+      background: #f7f7f7
+      list-style-type: none
+
+      *
+        -webkit-transition: none
+        -moz-transition: none
+        -o-transition: none
+        transition: none
+      a
+        text-decoration: none
+        padding: 9px 19px
+        width: 100%
+        box-sizing: border-box
+        -moz-box-sizing: border-box
+        -o-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        display: inline-block
+        overflow: hidden
+        vertical-align: top
+        zoom: 1
+        span
+          font-size: 12px
+          line-height: 16px
+      &.cur
+        a
+          span
+            border-bottom: 1px solid transparent
+      &.item
+        &.cur
+          /*background: #faaa00*/
+          background: #424242
+          &>a
+            color: #fff
+        &:hover
+          &>a
+            color: #fff
+  .item
+    &:hover
+      color: #FFF
+      /*background: #faaa00*/
+      background: #424242
+
+    .child_container
+      display: none
+      z-index: 10
+      background: #fff
+      border-bottom: 1px solid #DDD
+      .child_wrapp
+        border: 0
+        padding: 8px 10px
+        max-height: 500px
+        overflow: auto
+        a
+          line-height: 16px
+          height: inherit
+          font-size: 12px
+          padding: 3px 10px
+        .child
+          li
+            &:after
+              content: ""
+              display: block!important
+              position: absolute
+              left: 0
+              top: 10px
+              width: 2px
+              height: 2px
+              background: #1d1a1a
+            &>a
+              text-decoration: none
+              border: 0
+              padding-left: 9px
+        ul
+          padding: 0
+          li
+            &:after
+              content: ""
+              display: block!important
+              position: absolute
+              left: 0
+              top: 10px
+              width: 2px
+              height: 2px
+              background: #1d1a1a
+          &>li
+            background: #fff
+            position: relative
+            display: block
+            margin-left: 9px
+
+.menu_item
+  a
+    &:hover
+      color: #424242
+  &.cur
+    a
+      color: #424242
+
+#price, #price2
+  padding: 5px
+  width: 80px
+
+#options
+  width: 300px
+  padding: 10px
+  border: 1px solid #074776
+
+#slider_price
+  margin-top: 10px
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+  width: 12px
+  height: 12px
+  display: inline-block
+  cursor: pointer
+  position: absolute
+  z-index: 100
+  background: #fff
+  border-radius: 16px
+  border: 2px solid #ddd
+  border-color: #424242
+
+.ui-slider-handle
+  &:after
+    font-size: 0
+    content: "."
+    display: inline-block
+    background: #fff
+    width: 6px
+    height: 6px
+    left: 1px
+    position: absolute
+    top: 1px
+.ui-slider-horizontal
+  height: .4em
+
+.right_block.catalog
+  zoom: 1
+  padding: 0 0 0 210px
+  margin: -3px 0 0
+  overflow: visible
+  position: relative
+
+.inner_wrapper
+  position: relative
+  zoom: 1
+  padding: 0 10px
+  right: -10px
+  z-index: 2
+.sort_header
+  height: 29px
+  position: relative
+  z-index: 1
+  margin-bottom: 20px
+
+  &.view_block
+    border-bottom: 1px solid #e5e5e5
+  .sort_filter
+    float: left
+    a
+      display: inline-block
+      text-decoration: none
+      color: #a5a5a3
+      margin: 0 20px 0 0
+      font-size: 13px
+      &:hover
+        color: #373737
+
+      &.current
+        color: #373737
+      span
+        font-size: 12px
+        line-height: 13px
+
+      >span
+        vertical-align: top
+        float: left
+    .fa
+      display: inline-block
+      height: 13px
+      width: 18px
+      line-height: 13px
+      text-align: center
+
+.item-card
+  width: 210px
+  padding-bottom: 25px
+  white-space: normal
+  display: inline-block
+  vertical-align: top
+  text-align: center
+<<<<<<< HEAD
+=======
+  font-family: "Roboto Condensed", sans-serif
+>>>>>>> 5e400fc (Изменил шрифт для товаров в каталоге)
+  img
+    &:hover
+      cursor: pointer
+  .name
+    margin-top: 0.5rem
+    margin-bottom: 0
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 1rem
+    &:hover
+      cursor: pointer
+      text-decoration: underline
+  .price
+    font-size: 0.875rem
+    &.old
+      text-decoration: line-through
+      text-decoration-color: red
+      margin-bottom: 0
+  .discount
+    background: red
+    margin-left: 0.5rem
+    padding: 1px
+    font-size: 14px
+    font-family: "Open Sans Condensed", sans-serif
+    color: white
+  .item_wrap
+    padding: 0 10px
+    font-family: "Roboto Condensed", sans-serif
+.clearfix:after
+  content: "."
+  display: block
+  height: 0
+  clear: both
+  visibility: hidden
+
+
+.custom-pagination
+  .page-link
+    color: #292b2c
+    &:focus
+      background: #080808
+      color: #fff
+      border-color: #080808
+
+    &:hover
+      background: #080808
+      color: #fff
+      border-color: #080808
+  .page-item
+    &.active
+      .page-link
+        background: #080808
+        color: #fff
+        border-color: #080808
+
+.counter_block
+  border: 1px solid #e5e5e5
+  font-size: 0
+  width: 74px
+  margin: 0 auto
+  display: inline-block
+  border-radius: 2px
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+  height: 27px
+  .minus
+    font-size: 0
+    line-height: 27px
+    height: 27px
+    width: 21px
+    display: inline-block
+    cursor: pointer
+    vertical-align: top
+  .plus
+    font-size: 0
+    line-height: 27px
+    height: 27px
+    width: 21px
+    display: inline-block
+    cursor: pointer
+    vertical-align: top
+  &>span
+    &:before
+      display: inline-block
+      content: ""
+      width: 20px
+      height: 19px
+      background: url(/static/img/main/plus_minus.png) 5px -13px no-repeat
+      vertical-align: middle
+    &.plus
+      &:before
+        background-position: -17px -13px
+
+  input[type=text]
+    padding: 8px 8px 7px
+    width: 32px
+    border: 0
+    border-left: 1px solid #e5e5e5
+    border-right: 1px solid #e5e5e5
+    background: #f7f7f7
+    color: #373737
+    font-size: 10px
+    height: 26px
+    border-radius: 0
+    text-align: center
+    line-height: 13px
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    -o-box-sizing: border-box
+    -webkit-box-sizing: border-box
+
+.basket_fly
+  -webkit-transform: translateZ(0)
+  background: #fff
+  box-shadow: rgba(44,44,44,.4) 0 6px 18px
+  -moz-box-shadow: rgba(44,44,44,.4) 0 6px 18px
+  -webkit-box-shadow: rgba(44,44,44,.4) 0 6px 18px
+  border-radius: 0 0 0 2px
+  -moz-border-radius: 0 0 0 2px
+  -webkit-border-radius: 0 0 0 2px
+  top: 180px
+  z-index: 1031
+  position: fixed
+  width: 800px
+  right: 0
+  min-height: 122px
+  td
+    box-sizing: content-box
+    -moz-box-sizing: content-box
+    -o-box-sizing: content-box
+    -webkit-box-sizing: content-box
+  .basket_wrapp
+    margin-top: 27px
+    padding-top: 0
+    vertical-align: top
+    border-top: 1px solid #e7e7e7
+    .module-cart
+      margin-top: 0
+      background: #fff
+      margin: 0 0 20px
+      -webkit-transition: all 1s ease
+      -moz-transition: all 1s ease
+      -o-transition: all 1s ease
+      transition: all 1s ease
+      .goods
+        max-height: 260px
+        overflow-y: auto
+        border-bottom: 1px solid #e7e7e7
+
+      table
+        width: 100%
+        box-sizing: border-box
+        -moz-box-sizing: border-box
+        -o-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        padding: 8px 10px
+        td
+          padding: 8px 10px
+        &.colored
+          border-collapse: collapse
+          td
+            position: relative
+            border-top: 0
+            font-size: 12px
+            text-align: left
+            vertical-align: top
+            &.thumb-cell
+              overflow: hidden
+              padding: 11px 18px 10px 29px
+
+            &.delay-cell
+              padding-top: 25px
+              padding-bottom: 0
+            &.remove-cell
+              width: 20px
+              padding-top: 5px
+              padding-right: 5px
+
+            &.summ-cell
+              width: 150px
+              padding-top: 33px
+              font-size: 14px
+              .cost
+                &.prices
+                  .price
+                    margin: 0
+            &.remove-cell
+              width: 20px
+              padding-top: 5px
+              padding-right: 5px
+              a
+                border-radius: 20px
+                -moz-border-radius: 20px
+                -webkit-border-radius: 20px
+                display: inline-block
+                height: 17px
+                width: 17px
+                cursor: pointer
+                i
+                  border-radius: 20px
+                  -moz-border-radius: 20px
+                  -webkit-border-radius: 20px
+                  display: inline-block
+                  height: 17px
+                  width: 17px
+                  cursor: pointer
+                  background: url(/static/img/main/close_icons.png) 3px -23px no-repeat
+
+          tfoot
+            td
+              border-bottom: 0
+              padding: 26px 0 22px
+              &.row_titles
+                .item_title
+                  margin: 2px 43px 0 0
+                  font-size: 15px
+                  font-weight: 700
+                  line-height: 15px
+              &.row_values
+                padding-right: 20px
+                white-space: nowrap
+                *
+                white-space: nowrap
+                .price
+                  font-size: 15px
+                  font-weight: 700
+                  line-height: 15px
+                .wrap_prices
+                  width: 202px
+                  white-space: nowrap
+                  text-align: center
+
+            .bottom_btn
+              td
+                padding-bottom: 28px
+                padding-top: 29px
+                padding: 35px 15px 52px
+                .description
+                  font-size: 12px
+                  line-height: 16px
+                  color: #b3b3b3
+                  margin-top: 13px
+                  width: 100%
+                  text-align: left
+            tr[data-id=total_buttons]
+              td
+                border-top: 1px solid #e7e7e7
+                position: relative
+                zoom: 1
+                overflow: hidden
+
+            tr
+              td
+                &:first-child
+                  padding-left: 30px
+      thead
+        tr
+          background: #f7f7f7
+          color: #888
+      tr
+        -webkit-transition: all 1s ease
+        -moz-transition: all 1s ease
+        -o-transition: all 1s ease
+        transition: all 1s ease
+
+      tbody
+        border-left-width: 0
+        border-right-width: 0
+        border-bottom: none
+        border-left: 1px solid #e7e7e7
+        border-right: 1px solid #e7e7e7
+        tr
+          &:first-child
+            td
+              border-top: 0
+
+      tfoot
+        border: 0
+
+      td
+        padding-bottom: 9px
+        vertical-align: top
+        &.thumb-cell
+          a
+            display: inline-block
+            width: 70px
+            height: 70px
+            line-height: 70px
+            text-align: center
+            color: #e69c00
+            img
+              border: 0
+              border-radius: 5px
+              -moz-border-radius: 5px
+              -webkit-border-radius: 5px
+              max-width: 100%
+              max-height: 100%
+              vertical-align: middle
+
+        &.name-cell
+          padding-top: 32px
+          min-width: 150px
+          a
+            text-decoration: none
+            font-size: 14px
+            font-weight: 500
+
+        &.cost-cell
+          padding-top: 33px
+          width: 200px
+          font-size: 14px
+          &.notes
+            padding-top: 10px
+
+
+        &.count-cell
+          padding-top: 26px
+          width: 132px
+
+    .counter_block
+      white-space: nowrap
+
+  .opener
+    position: absolute
+    width: 67px
+    left: -67px
+    border-radius: 2px 0 0 2px
+    -moz-border-radius: 2px 0 0 2px
+    -webkit-border-radius: 2px 0 0 2px
+    top: 0
+
+    .basket_count
+      margin: 0 0 2px
+      display: inline-block
+      text-align: center
+      width: 67px
+      height: 67px
+      cursor: pointer
+      vertical-align: top
+      zoom: 1
+      border-radius: 2px 0 0 2px
+      -moz-border-radius: 2px 0 0 2px
+      -webkit-border-radius: 2px 0 0 2px
+      background: #e3e3e3
+
+
+    .wish_count
+      display: inline-block
+      text-align: center
+      width: 67px
+      height: 67px
+      cursor: pointer
+      vertical-align: top
+      zoom: 1
+      border-radius: 2px 0 0 2px
+      -moz-border-radius: 2px 0 0 2px
+      -webkit-border-radius: 2px 0 0 2px
+      background: #e3e3e3
+
+  .wraps_icon_block
+    display: inline-block
+    vertical-align: top
+    width: 17px
+    height: 16px
+    position: relative
+    top: 39%
+    float: none
+    margin-right: 12px
+    &:before
+      width: 17px
+      height: 16px
+      -moz-transition: all .3s ease
+      -o-transition: all .3s ease
+      -ms-transition: all .3s ease
+      transition: all .3s ease
+      display: block
+      content: "\f291"
+      font-family: "FontAwesome"
+      position: relative
+      top: 0
+
+    .count
+      position: absolute
+      right: -13px
+      top: -10px
+      left: auto
+      text-align: center
+      opacity: 1
+      font-size: 13px
+      color: #212121
+      &>span
+        width: 20px
+        background: #1d1a1a
+        color: #fff
+        display: table-cell
+        height: 20px
+        vertical-align: middle
+        -webkit-border-radius: 20px
+        -moz-border-radius: 20px
+        border-radius: 20px
+
+  .basket_sort
+    padding: 25px 10px 0 15px
+    .remove_all_basket
+      position: relative
+      margin: 12px 0 27px
+      float: right
+      display: none
+      padding: 6px 12px 5px
+      &.cur
+        display: block
+
+  .basket_title
+    font-size: 26px
+    margin-right: 48px
+    margin-left: 13px
+    font-weight: 600
+    color: #1d1a1a
+.button
+  &.transparent
+    color: #ddd
+    border: 1px solid #ddd
+    background: 0 0
+    padding-top: 8px
+    padding-bottom: 7px
+
+  &.grey_br span
+    color: #6d6d6d
+    border-color: #e5e5e5
+  &.grey_br
+    &.transparent
+      color: #6d6d6d
+      border-color: #e5e5e5
+ul
+  &.tabs_content
+    list-style: none
+    margin: 0
+    padding: 0
+    &>li
+      min-width: 100%
+      &.cur
+        display: inline-block
+
+
+.cost
+  &.prices
+    .price
+      font-size: 15px
+      font-weight: 700
+      line-height: 15px
+      margin-top: 0
+    .price_name
+      font-size: 10px
+      line-height: 15px
+      margin: 6px 0 2px
+      clear: both
+  .price
+    color: #373737
+    &:not(.discount)
+      margin-right: 4px
+      margin-right: 4px
+      float: left
+      white-space: nowrap
+.button
+  &.close
+  opacity: 1
+  float: none
+  text-shadow: none
+
+@media (max-height: 768px)
+  .basket_fly
+    top: 148px

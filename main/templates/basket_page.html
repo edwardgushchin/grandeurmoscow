@@ -1,0 +1,127 @@
+{% extends "main_template.html" %}
+{% block content %}
+{% load staticfiles %}
+<main>
+    <div class="container">
+        <h1>Блокнот</h1>
+        <div class="order-details">
+        <form action="/basket" class="j-prevent-double-click basket-form" id="basketForm" method="post" novalidate="novalidate">
+
+
+            <div class="j-basket-list-location">
+                <div id="basket-list" class="basket-list">
+                    <table class="basket-list-table i-order-good-table">
+                        <thead>
+                        <tr>
+                            <th class="number">№</th>
+                            <th>Описание</th>
+                            <th class="price">Цена</th>
+                            <th class="basketTableSum">Сумма</th>
+                            <th>Действие</th>
+                        </tr>
+                        </thead>
+                        <tbody class="basket-list-body" data-jsv-df="">
+                        <tr class="outerRow">
+                            <td class="number">1</td>
+                            <td class="pic product-details">
+                        <a class="j-product-popup image-link" title="Стеллаж Office Bookcase" href="#">
+                            <img alt="Стеллаж Office Bookcase" src="/static/img/main/19.png">
+                            <i class="i"></i>
+                        </a>
+                        <div class="description">
+                            <a class="j-product-popup row-line good-title" title="Стеллаж Office Bookcase" href="#">
+                                Стеллаж Office Bookcase, COSMO
+                            </a>
+
+                            <div class="row-line">
+                                <span class="option">Артикул:</span>
+                                <span class="value">4282441</span>
+                            </div>
+                            <div class="row-line">
+                                <span class="option">Цвет каркаса:</span>
+                                <span class="value">Натуральный</span>
+                            </div>
+                            <div class="row-line">
+                                <span class="option">Материал каркаса:</span>
+                                <span class="value">Орех натуральный</span>
+                            </div>
+                            <div class="row-line quantity">
+                                <span class="option">Кол-во:</span>
+                                <span class="value">
+                                    <span class="input-number">
+                                        <button type="button" class="minus"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                        <input type="text" data-link="quantity" autocomplete="off" maxlength="2" value="1" class="in_tb numeric ignore">
+                                        <button type="button" class="plus"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </td>
+                     <td class="price" colspan="1">30%</span>
+                        <del class="price-wo-sale">133 640</del>
+                                93 548
+                     </td>
+                     <td class="basketTableSum" style="display: table-cell;">
+                         93 548
+                     </td>
+                    <td class="action">
+                        <span class="action-link">
+            <a href="#" class="delete j-basket-item-del tooltipstered" title="Удалить товар"></a>
+        </span>
+                    </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="basket-list-table i-order-good-table hr">
+                        <tbody class="basket-list-body">
+                        <tr>
+                            <td class="coupon-cell"></td>
+                            <td class="price phantom-price">
+                                13 928
+                            </td>
+                            <td class="price phantom-price">
+                                93 548
+                            </td>
+                            <td class="basketTableSum phantom-price">
+                                93 548
+                            </td>
+                            <td class="action"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="pseudo-tfoot">
+                <div id="basket-footer" class="basket-footer">
+                    <div class="total-price-percent row-line">
+                        <span class="column">
+                <span class="amount-order">Сумма заказа</span> <del class="sumNoDiscount">133 640&nbsp;<i class="fa fa-rub" aria-hidden="true"></i></del>:
+            </span>
+            <span class="column">
+                <ins class="sum">93 548&nbsp;<i class="fa fa-rub" aria-hidden="true"></i></ins>
+             </span>
+
+                </div>
+                    <div class="itogo row-line">
+                        <span class="sum column">ИТОГО:</span> <span class="sum column">93 548&nbsp;<i class="fa fa-rub" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="economy row-line">
+                        <span class="sum column">Вы экономите:</span> <span class="sum column">40 000&nbsp;<i class="fa fa-rub" aria-hidden="true"></i>
+                    </span>
+                    </div>
+            </div>
+            </div>
+        </form>
+
+            <div class="order-complete-buttons">
+                <a id="basketLoginPopup" class="btn-darkgray j-btn-step" href="#">Продолжить покупку</a>
+                <a class="btn-darkgray j-btn-step" href="#order" data-toggle="modal">Составить смету</a>
+            </div>
+
+
+        </div>
+    </div>
+</main>
+{% endblock %}

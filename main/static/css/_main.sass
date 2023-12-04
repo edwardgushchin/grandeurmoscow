@@ -1,0 +1,172 @@
+img
+    max-width: 100%
+    max-height: 100%
+
+a
+    text-decoration: none
+    color: inherit
+
+    &:hover, &:focus
+        text-decoration: none
+        color: inherit
+
+.color-gray
+    color: gray
+
+header 
+    text-align: center
+    text-transform: uppercase
+    font-family: "Open Sans Condensed", sans-serif
+    padding: 2.5rem
+
+    h1, p
+        margin-bottom: 0
+
+    h1 
+        font-size: 4.125rem
+        color: #424242
+    
+    p
+        font-size: 1.5625rem
+        color: #212121
+
+nav
+    margin-bottom: 2rem
+
+    .container
+        @media (min-width: 992px)
+            width: $container-width
+        
+        .navbar-brand
+            display: none
+            font-family: "Open Sans Condensed", sans-serif
+            text-transform: uppercase
+            width: 100%
+            text-align: center
+            @media (max-width: 992px)
+                display: block
+        
+        .navbar-nav
+            width: 100%
+
+            .nav-item
+                margin: auto
+                text-transform: uppercase
+                color: #9e9e9e
+                font-family: 'Roboto Condensed', sans-serif
+                font-size: 0.8125rem
+                @include transition(0.2s)
+
+                &:first-child
+                    @media (min-width: 992px)
+                        margin-left: 0
+                
+                &:last-child
+                    @media (min-width: 992px)
+                        margin-right: 0
+main
+    .container
+        @media (min-width: 992px)
+            width: $container-width
+<<<<<<< HEAD
+
+=======
+.search_middle_block
+    position: relative
+    width: 25%
+    margin: 0 auto 15px
+    -webkit-transition: width .25s ease-in
+    -moz-transition: width .25s ease-in
+    -o-transition: width .25s ease-in
+    transition: width .25s ease-in
+    .text
+        width: 100%
+        padding: 10px 45px 9px 13px
+        background: #eee
+        border-color: transparent
+        height: 41px
+        font-size: 12px
+        border: 1px solid #E5E5E5
+        border-radius: 2px
+        box-shadow: none
+        color: #383838
+        box-sizing: border-box
+        -moz-box-sizing: border-box
+        -o-box-sizing: border-box
+        -webkit-box-sizing: border-box
+    .button
+        width: 39px
+        height: 39px
+        display: inline-block
+        background: url(../img/btn-search.png) no-repeat !important
+        position: absolute
+        right: 2px
+        border: 0
+        top: 2px
+        -webkit-appearance: none
+        background: none
+        color: transparent
+        &:hover
+            background: none
+            opacity: 0.8
+        &.icon
+            text-indent: -9999px
+/*h1    #Указывайте селектор конкретней. Ломается то, что уже настроено
+    font-size: 36px 
+    font-weight: 600  #Удалил, потому что из-за этого заголовки в кубах на главной странице стали жирными
+    line-height: 30px
+    margin: 0 0 39px  #Удалил, потому что из за этого поехали заголовки в кубах на главной странице */
+h2
+    font-size: 24px
+    margin:  0 0 24px
+h3
+    font-size: 20px
+    line-height: 20px
+h4
+    font-size: 16px
+>>>>>>> 88bd55b (Исправил все)
+footer
+    overflow: hidden
+    padding: $grid-space
+
+    .footer-hr-title
+        float: left
+        padding-right: $grid-space
+
+    hr
+        position: relative
+        bottom: 2px
+        background: black
+
+    .footer-col
+        display: flex
+        flex-direction: column
+
+        a, p
+            padding: 10px
+            margin: 0
+
+    .container
+        .row
+            width: 100%
+            margin: 0
+
+            @media (max-width: 575px)
+                text-align: center
+
+
+.end
+    background: black
+    color: white
+    text-align: center
+    padding: $grid-space
+    font-family: 'Roboto Condensed', sans-serif
+
+    p
+        margin: 0
+
+    a
+        text-decoration: underline
+
+.bg-inverse
+    background-color: #080808 !important 
